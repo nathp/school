@@ -15,12 +15,16 @@ class Student {
 
   static Student registerNew(String id, Name name, Dob dob, Gender g) {
     Student s = new Student(id:id, name:name, dob:dob, gender:g)
-    Students.instance().add s
+    StudentRepository.instance().add s
     s
   }
 
   void registerIn(Classroom classroom) {
     this.classroom = classroom
-    Classrooms.instance().notify this, classroom
+  }
+
+  def valueOf(Class klazz, String key) {
+    Event e = ActionsRepository.instance().find(klazz, this)
+    e.value(key)
   }
 }

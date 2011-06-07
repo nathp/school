@@ -5,12 +5,13 @@ package com.pgn.school
  * Date: 6/7/11, Time: 3:27 PM
  * Do not use without permission.
  */
-class Students {
-  final static Students instance = new Students()
+class StudentRepository {
+
+  final static StudentRepository instance = new StudentRepository()
 
   Set kids = [] as Set
 
-  static Students instance() {
+  static StudentRepository instance() {
     instance
   }
 
@@ -19,6 +20,10 @@ class Students {
   }
 
   Student lookup(String studentId) {
-    kids.find {it.id = studentId}
+    kids.find {it.id == studentId}
+  }
+
+  def find(Closure c) {
+      kids.find c
   }
 }

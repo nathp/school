@@ -8,4 +8,19 @@ package com.pgn.school
 class Classroom {
   String name
   AcademicYear year
+
+  void doAction(Action action) {
+    each { Student s ->
+      def event = action.actOn(s)
+      ActionsRepository.instance().save(action, event, s)
+    }
+  }
+
+  def each(Closure c) {
+    students().each c
+  }
+
+  List students() {
+    StudentRepository.instance().find { it.classroom = this} as List
+  }
 }
