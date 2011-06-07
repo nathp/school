@@ -2,7 +2,7 @@ package com.pgn.school.core
 
 import com.pgn.school.Action
 import com.pgn.school.core.entity.Student
-import com.pgn.school.core.repository.ActionsRepository
+import com.pgn.school.core.repository.EventsRepository
 
 /**
  * Copy right of Prasanth Nath.
@@ -20,7 +20,7 @@ class StudentCollection {
   void doAction(Action action) {
     students().each { Student s ->
       def event = action.actOn(s)
-      ActionsRepository.instance().save(action, event, s)
+      EventsRepository.instance().save(action, event, s)
     }
   }
 }

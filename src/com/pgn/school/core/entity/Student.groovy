@@ -6,7 +6,7 @@ import com.pgn.school.core.value.Gender
 
 import com.pgn.school.core.repository.StudentRepository
 import com.pgn.school.core.value.Event
-import com.pgn.school.core.repository.ActionsRepository
+import com.pgn.school.core.repository.EventsRepository
 
 /**
  * Copy right of Prasanth Nath.
@@ -32,7 +32,7 @@ class Student {
   }
 
   def valueOf(Class actionType, String actionProperty) {
-    Event e = ActionsRepository.instance().find(actionType, this)
+    Event e = EventsRepository.instance().find(actionType, this)
     e.value(actionProperty)
   }
 }

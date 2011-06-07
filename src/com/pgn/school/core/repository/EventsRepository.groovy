@@ -9,10 +9,10 @@ import com.pgn.school.Action
  * Date: 6/7/11, Time: 5:04 PM
  * Do not use without permission.
  */
-class ActionsRepository {
-  private static ActionsRepository instance = new ActionsRepository()
+class EventsRepository {
+  private static EventsRepository instance = new EventsRepository()
 
-  static ActionsRepository instance() { instance }
+  static EventsRepository instance() { instance }
 
   def events = []
 
@@ -27,8 +27,8 @@ class ActionsRepository {
     events.add(new StudentEvent(action: action, event: event, student: student))
   }
 
-  Event find(Class klazz, Student s) {
-    def allEvents = events.findAll {it.action.getClass() == klazz && it.student == s }.collect {it.event}
+  Event find(Class actionClass, Student s) {
+    def allEvents = events.findAll {it.action.getClass() == actionClass && it.student == s }.collect {it.event}
     allEvents ? allEvents[0] : Event.NONE
   }
 }

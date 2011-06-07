@@ -23,7 +23,7 @@ public class SimpleStudentLifeCycleTestsTest extends TestCase {
     assertTrue StudentRepository.instance().lookup("s1").currentTerm.name == "1"
   }
 
-  void test_should_conduct_an_examination_to_a_class() {
+  void test_should_conduct_an_examination_to_a_class_and_retrieve_a_students_grades() {
     Term classA = TermRepository.instance().newClassroom("1", AcademicYear.forPeriod("01062010", "31032011"))
     Student student = Student.registerNew("s1", new Name("prasanth", "nath"), Dob.from("14021980"), Gender.Male)
     student.registerIn(classA)

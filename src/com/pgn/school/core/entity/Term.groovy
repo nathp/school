@@ -1,9 +1,8 @@
 package com.pgn.school.core.entity
 
-import com.pgn.school.core.entity.Student
 import com.pgn.school.core.repository.StudentRepository
 import com.pgn.school.core.value.AcademicYear
-import com.pgn.school.core.repository.ActionsRepository
+
 import com.pgn.school.Action
 import com.pgn.school.core.StudentCollection
 

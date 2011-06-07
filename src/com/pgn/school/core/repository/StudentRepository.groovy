@@ -9,7 +9,7 @@ import com.pgn.school.core.entity.Student
  */
 class StudentRepository {
 
-  final static StudentRepository instance = new StudentRepository()
+  private final static StudentRepository instance = new StudentRepository()
 
   Set kids = [] as Set
 
