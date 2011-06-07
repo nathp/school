@@ -1,4 +1,4 @@
-package com.pgn.school
+package com.pgn.school.core.value
 
 /**
  * Copy right of Prasanth Nath.

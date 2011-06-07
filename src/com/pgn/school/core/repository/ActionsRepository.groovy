@@ -1,4 +1,8 @@
-package com.pgn.school
+package com.pgn.school.core.repository
+
+import com.pgn.school.core.entity.Student
+import com.pgn.school.core.value.Event
+import com.pgn.school.Action
 
 /**
  * Copy right of Prasanth Nath.

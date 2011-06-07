@@ -1,4 +1,4 @@
-package com.pgn.school
+package com.pgn.school.core.value
 
 /**
  * Copy right of Prasanth Nath.
@@ -6,11 +6,11 @@ package com.pgn.school
  * Do not use without permission.
  */
 class AcademicYear {
-  com.pgn.school.Date from
-  com.pgn.school.Date to
+  Date from
+  Date to
 
 
   static forPeriod = {String fromDate, String toDate ->
-    new AcademicYear(from: com.pgn.school.Date.newDate(fromDate), to:com.pgn.school.Date.newDate(toDate))
+    new AcademicYear(from: Date.newDate(fromDate), to:Date.newDate(toDate))
   }
 }

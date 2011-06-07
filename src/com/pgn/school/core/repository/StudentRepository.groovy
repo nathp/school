@@ -1,4 +1,6 @@
-package com.pgn.school
+package com.pgn.school.core.repository
+
+import com.pgn.school.core.entity.Student
 
 /**
  * Copy right of Prasanth Nath.

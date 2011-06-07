@@ -1,6 +1,8 @@
 package com.pgn.school
 
 import com.pgn.school.Evaluation.Result
+import com.pgn.school.core.entity.Student
+import com.pgn.school.core.value.Event
 
 /**
  * Copy right of Prasanth Nath.
