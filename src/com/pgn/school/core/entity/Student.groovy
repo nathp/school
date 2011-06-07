@@ -21,12 +21,6 @@ class Student {
 
   Term currentTerm
 
-  static Student registerNew(String id, Name name, Dob dob, Gender g) {
-    Student s = new Student(id:id, name:name, dob:dob, gender:g)
-    StudentRepository.instance().add s
-    s
-  }
-
   void registerIn(Term classroom) {
     this.currentTerm = classroom
   }

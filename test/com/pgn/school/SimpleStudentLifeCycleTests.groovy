@@ -17,7 +17,7 @@ public class SimpleStudentLifeCycleTestsTest extends TestCase {
   void test_should_be_able_to_assign_a_student_to_a_class() {
     Term classA = TermRepository.instance().newClassroom("1", AcademicYear.forPeriod("01062010", "31032011"))
 
-    Student student = Student.registerNew("s1", new Name("prasanth", "nath"), Dob.from("14021980"), Gender.Male)
+    Student student = StudentRepository.instance().registerNew("s1", new Name("prasanth", "nath"), Dob.from("14021980"), Gender.Male)
 
     student.registerIn(classA)
     assertTrue StudentRepository.instance().lookup("s1").currentTerm.name == "1"
@@ -25,7 +25,7 @@ public class SimpleStudentLifeCycleTestsTest extends TestCase {
 
   void test_should_conduct_an_examination_to_a_class_and_retrieve_a_students_grades() {
     Term classA = TermRepository.instance().newClassroom("1", AcademicYear.forPeriod("01062010", "31032011"))
-    Student student = Student.registerNew("s1", new Name("prasanth", "nath"), Dob.from("14021980"), Gender.Male)
+    Student student = StudentRepository.instance().registerNew("s1", new Name("prasanth", "nath"), Dob.from("14021980"), Gender.Male)
     student.registerIn(classA)
 
     Evaluation evaluation = mock(Evaluation)
